@@ -1,0 +1,78 @@
+@import "../node_modules/ol/ol.css";
+html, body {
+  margin: 0;
+  height: 100%;
+}
+html #menu .center.menu, body #menu .center.menu {
+  width: 100%;
+  justify-content: center;
+}
+html #menu .center.menu .category.search.item, body #menu .center.menu .category.search.item {
+  width: 40%;
+}
+html .sidebar .form .dividing.header, body .sidebar .form .dividing.header {
+  padding-left: 7px;
+  padding-right: 7px;
+}
+html .sidebar .form .fields, body .sidebar .form .fields {
+  margin: 0;
+}
+html .sidebar .form .fields .field > .checkbox, body .sidebar .form .fields .field > .checkbox {
+  width: 100%;
+  text-align: left;
+}
+html .sidebar .form .fields [class*="center aligned"], body .sidebar .form .fields [class*="center aligned"] {
+  align-content: center;
+}
+html .sidebar .form .fields [class*="end aligned"], body .sidebar .form .fields [class*="end aligned"] {
+  align-content: end;
+}
+html .sidebar .form .fields [class*="right aligned"], body .sidebar .form .fields [class*="right aligned"] {
+  text-align: right;
+}
+html .sidebar .form .ui.grid, body .sidebar .form .ui.grid {
+  margin: 0;
+}
+html .sidebar .form .ui.grid .row.sortable-item, body .sidebar .form .ui.grid .row.sortable-item {
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #dededf;
+  cursor: grab;
+}
+html .sidebar .form .ui.grid .row.sortable-item :active, body .sidebar .form .ui.grid .row.sortable-item :active {
+  cursor: grabbing;
+}
+html .sidebar .form .ui.grid .row.sortable-item .icon.trash, body .sidebar .form .ui.grid .row.sortable-item .icon.trash {
+  color: #e0e1e2;
+  cursor: pointer;
+}
+html .sidebar .form .ui.grid .row.sortable-item .icon.grip, body .sidebar .form .ui.grid .row.sortable-item .icon.grip {
+  color: #e0e1e2;
+}
+html .sidebar .form .ui.grid .row.sortable-item:hover .icon.grip, body .sidebar .form .ui.grid .row.sortable-item:hover .icon.grip {
+  color: #cacbcd;
+}
+html .sidebar .form .ui.grid .row.sortable-item .icon.trash:hover, body .sidebar .form .ui.grid .row.sortable-item .icon.trash:hover {
+  color: #cacbcd;
+}
+html #sidebar, body #sidebar {
+  z-index: 2;
+}
+html #sidebarAddLayer, body #sidebarAddLayer {
+  z-index: 1;
+  padding-left: 260px;
+}
+html #sidebarAddLayer .form:first-child, body #sidebarAddLayer .form:first-child {
+  padding-top: 3px;
+}
+html #mainContent, body #mainContent {
+  height: calc(100% - 48.2px);
+  z-index: 0;
+}
+html #mainContent #map, body #mainContent #map {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  z-index: -1;
+}/*# sourceMappingURL=style.css.map */
