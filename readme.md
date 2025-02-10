@@ -1,18 +1,13 @@
-# OpenLayers + Vite
+# Portfolio Map Project
 
-This example demonstrates how the `ol` package can be used with [Vite](https://vitejs.dev/).
-
-To get started, run the following (requires Node 14+):
-
-    npx create-ol-app my-app --template vite
-
-Then change into your new `my-app` directory and start a development server (available at http://localhost:5173):
-
-    cd my-app
-    npm start
-
-To generate a build ready for production:
-
-    npm run build
-
-Then deploy the contents of the `dist` directory to your server.  You can also run `npm run serve` to serve the results of the `dist` directory for preview.
+Om het projec te gebruiken doe het volgende:
+1. Zorg dat [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) geïnstalleerd is.
+2. Ga naar het project en installeer de NPM packages met:
+    ```
+        npm install
+    ```
+3. Start nu het project met:
+    ```
+        npm start
+    ```
+4. Ik hoor graag je feedback!
