@@ -46,6 +46,18 @@ html, body {
 
       .ui.grid{
         margin: 0;
+        
+        .sortable-placeholder{
+          height: 32.1875px;
+        }
+
+        .row.sortable-item:first-of-type{
+          border-top: 1px solid #dededf !important;
+        }
+
+        .ui-sortable-helper{
+          border-top: 1px solid #dededf !important;
+        }
 
         .row.sortable-item{
           padding-top: 0.4rem;

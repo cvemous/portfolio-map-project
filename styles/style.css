@@ -33,6 +33,15 @@ html .sidebar .form .fields [class*="right aligned"], body .sidebar .form .field
 html .sidebar .form .ui.grid, body .sidebar .form .ui.grid {
   margin: 0;
 }
+html .sidebar .form .ui.grid .sortable-placeholder, body .sidebar .form .ui.grid .sortable-placeholder {
+  height: 32.1875px;
+}
+html .sidebar .form .ui.grid .row.sortable-item:first-of-type, body .sidebar .form .ui.grid .row.sortable-item:first-of-type {
+  border-top: 1px solid #dededf !important;
+}
+html .sidebar .form .ui.grid .ui-sortable-helper, body .sidebar .form .ui.grid .ui-sortable-helper {
+  border-top: 1px solid #dededf !important;
+}
 html .sidebar .form .ui.grid .row.sortable-item, body .sidebar .form .ui.grid .row.sortable-item {
   padding-top: 0.4rem;
   padding-bottom: 0.4rem;

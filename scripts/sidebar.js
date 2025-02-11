@@ -28,6 +28,8 @@ export default class Sidebar {
         $('#changeCameraAngle').on('click', this.changeCameraAngle.bind(this))
         $('#toggleLayerPanel').on('click', this.toggleLayerPanel.bind(this))
         $('.closeLayerPanel').on('click', this.toggleLayerPanel.bind(this));
+        $('#addCountries').on('click', this.searchCountry.bind(this));
+        $('#dataLayers').on('click', '.removeItem', this.removeSortableItem.bind(this));
     }
   
     // Change the lock icon and enable/disable the input field
@@ -56,6 +58,7 @@ export default class Sidebar {
       $('#dataLayers').sortable({
         connectWith: '#dataLayers',
         items: '.draggable-item, .sortable-item',
+        placeholder: "sortable-placeholder",
         start: (event, ui) => {
             $('#sortable1').sortable('enable');
         },
@@ -74,5 +77,45 @@ export default class Sidebar {
         }else{
             this.sidebarAddLayer.sidebar('toggle');
         } 
+    }
+
+    // Search for a country from dropdown
+    searchCountry(){
+        const value = $('#countryDropdown').dropdown('get value');
+        if (!value) return;
+        OlMap.getSearchResults(value);
+        Sidebar.addItemToList(value);
+        $('#countryDropdown').dropdown('clear');
+    }
+
+    // Add item to the sortable list
+    static addItemToList(item){
+        const divItem = `
+            <div class="row sortable-item">
+                <div class="three wide column">
+                    <i class="grip horizontal icon"></i>
+                </div>
+                <div class="ten wide column">` + item + `</div>
+                <div class="three wide column">
+                    <i class="trash icon removeItem" data-value="` + item +`"></i>
+                </div>
+            </div>
+        `;        
+        $("#dataLayers").append(divItem);
+        $("#dataLayers").sortable('refresh');
+    }
+
+    // Remove item from the sortable list
+    removeSortableItem(e){
+        let value = null;
+        if ('value' in e.target.dataset) {
+            value = e.target.dataset.value
+        } else {
+            return false;
+        }
+        if (OlMap.removeLayer(value)){
+            $(e.target).closest('.sortable-item').remove();
+            $("#dataLayers").sortable('refresh');
+        }
     }
   }
