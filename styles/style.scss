@@ -28,7 +28,6 @@ html, body {
         .field>.checkbox{
           width: 100%;
           text-align: left;
-          // cursor: pointer;
         }
 
         [class*="center aligned"]{
@@ -102,7 +101,7 @@ html, body {
   }
 
   #mainContent{
-    height: calc(100% - 48.2px);
+    height: calc(100% - 48.6px);
     z-index: 0;
   
     #map {
@@ -114,7 +113,3 @@ html, body {
     }
   }
 }
-
-
-
-

@@ -75,7 +75,7 @@ html #sidebarAddLayer .form:first-child, body #sidebarAddLayer .form:first-child
   padding-top: 3px;
 }
 html #mainContent, body #mainContent {
-  height: calc(100% - 48.2px);
+  height: calc(100% - 48.6px);
   z-index: 0;
 }
 html #mainContent #map, body #mainContent #map {
